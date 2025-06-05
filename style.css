@@ -1,0 +1,183 @@
+:root {
+    --specal-color: #b2496c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Main container for the responsiveness */
+.container { 
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Images/background-menu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* CSS for the nav */
+.nav {
+    display: flex;
+    width: 100%;
+    height: 7%;
+    background-color: rgba(0, 0, 0, 0.473);
+    border-bottom: 3px solid var(--specal-color);
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+/* CSS for the nav button */
+.nav-button {
+    border: 2px solid var(--specal-color);
+    background: none;
+    color: white;
+    width: 10%;
+    cursor: pointer;
+    height: 60%;
+}
+/* Animate the nav button when we hover over it */
+.nav-button:hover {
+    background-color: var(--specal-color);
+}
+/* This is spesificly ment to align the main element like the title and form but it also gives the darker effect on the background image */
+.container-cover {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.601);
+    align-items: center;
+    flex-direction: column;
+}
+/* CSS for the title of the page */
+.title {
+    text-align: center;
+    width: 100%;
+    font-weight: 100;
+    color: white;
+    letter-spacing: 0.6vw;
+    font-size: 2vw;
+    padding-top: 7vh;
+}
+/* this is the container where the form stuff and the picture are added */
+.order-container {
+    display: flex;
+    width: 50%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.422);
+    margin-top: 4vh;
+}
+/* This is the positioning css for the order form */
+.order-form {
+    width: 60%;
+    height: 100%;
+}
+/* The title of the form */
+.order-form-title {
+    font-weight: 500;
+    color: var(--specal-color);
+    width: 100%;
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 10%;
+}
+/* The image next to the form */
+.menu-image {
+    display: flex;
+    height: 100%;
+    width: 40%;
+    justify-content: flex-end;
+}
+/* This is the css for the selection part above the input */
+.decide {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 5%;
+}
+/* Text above the order imput */
+.order-input-text {
+    margin-left: 15%;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+/* CSS for the textlayout of the selection part above the imput */
+.decide-text {
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* The css that gets added to the selected object */
+.decide-selected {
+    text-decoration: underline;
+    color: var(--specal-color);
+}
+/* Input to put the text into */
+.order-input {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    height: 5vh;
+}
+
+.order-button:hover {
+    background-color: var(--specal-color);
+}
+/* The button layout connected to the js */
+.order-button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 7%;
+    width: 70%;
+    height: 6vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    border: 3px solid var(--specal-color);
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+
+    .order-form {
+        width: 100%;
+    }
+
+    .menu-image {
+        display: none;
+    }
+
+    .title {
+        font-size: 4vw;
+    } 
+
+    /* We force the buttons to the right so its easyer for most mobile users to  click the nav buttons */
+    .nav {
+        flex-direction: column;
+        height: 18%;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+     /* The nav buttons should be larger so they are easyer to click on mobile or tablets */
+    .nav-button {
+        height: 5vh;
+        width: 40%;
+        margin-right: 5vw;
+    }
+     /* Remove the / icons on the decide part to safe space */
+    .decide-middle {
+        display: none;
+    }
+
+    .decide-text {
+        font-size: 2.5vw;
+    }
+
+}
